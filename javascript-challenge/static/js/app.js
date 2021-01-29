@@ -1,5 +1,9 @@
 // from data.js
 var tableData = data;
+
+// YOUR CODE HERE!
+// from data.js
+var tableData = data;
 console.log(data);
 // YOUR CODE HERE! 
 
@@ -23,21 +27,21 @@ function buildTable(tableData){
     });
 }
 
-function filterTable (elem){
+function filterTable(elem){
     var changedElem = d3.event.target;
     var filterDate = changedElem;
 
     filteredData = tableData.filter(rec => rec['datetime'] == filterDate);
-
     console.log(filteredData);
-}
+    
+
 
     //Clear out the tbody
     tbody.html('');
 
     // Rebuild the filtered table using the buildTable function
     buildTable(filteredData);
-
+}
 //Call the function to initially load the table
 buildTable(tableData);
 
